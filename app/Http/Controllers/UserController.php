@@ -14,6 +14,10 @@ class UserController extends Controller {
         return User::all();
     }
 
+    public function show($id) {
+        return User::find($id);
+    }
+
     public function save(Request $request) {
         $user = new User();
         $user->name = $request->name;

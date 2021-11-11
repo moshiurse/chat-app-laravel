@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, 'showAll']);
 
-Route::get('/user/{id}');
+Route::get('/{id}', [UserController::class, 'show']);
 
 Route::post('/', [UserController::class, 'save']);
 
